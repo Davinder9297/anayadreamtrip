@@ -1,4 +1,3 @@
-"use client"
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#b792a2] text-white p-4 sticky top-0 w-full z-50 bg-opacity-50 backdrop-blur-lg opacity-80">
+    <div className="bg-black text-white p-4 sticky top-0 w-full z-50 bg-opacity-50 backdrop-blur-lg opacity-80">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
