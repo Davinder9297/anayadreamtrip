@@ -1,7 +1,7 @@
 .container {
     position: relative;
     width: 100%;
-    height: 680px; /* Default height for larger screens */
+    height: 550px; /* Default height for larger screens */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@
       transform: translateY(0) translateX(0); /* Start at the top at the initial position */
     }
     100% {
-      transform: translateY(600px) translateX(var(--horizontal-movement)); /* Fall to the bottom with horizontal drift */
+      transform: translateY(550px) translateX(var(--horizontal-movement)); /* Fall to the bottom with horizontal drift */
     }
   }
   

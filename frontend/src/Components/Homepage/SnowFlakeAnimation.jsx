@@ -40,9 +40,10 @@ const SnowflakeAnimation = () => {
 
   return (
     <div
-      className={styles.container}
+      className={`${styles.container} bg-blend-darken overflow-hidden relative h-[550px]`}
       style={{
         backgroundImage: images[bgIndex], 
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
       }}
     >
         <Header/>
@@ -63,8 +64,8 @@ const SnowflakeAnimation = () => {
           }}
         ></div>
       ))}
-      <div className="text-black text-[64px] font-[500] font-marcellus sitename">Your Winter Getaway</div>
-      <div>The perfect getaway is just a click away. Book now and start your adventure!</div>
+      <div className="text-white text-[64px] font-[500] font-marcellus text-center mt-16">Your Winter Getaway</div>
+      <div className="w-[60%] text-white text-center mx-auto text-[32px] font-marcellus tracking-wide mt-6">The perfect getaway is just a click away. Book now and start your adventure!</div>
     </div>
   );
 };

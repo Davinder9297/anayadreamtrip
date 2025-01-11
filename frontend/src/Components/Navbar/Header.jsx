@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-black text-white p-4 sticky top-0 w-full z-50 bg-opacity-50 backdrop-blur-lg opacity-80">
+    <div className="bg-black text-white p-4 fixed top-0 w-full z-50 bg-opacity-50 backdrop-blur-lg opacity-80">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -24,7 +24,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navbar */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex lg:flex xl:flex 2xl:flex space-x-6">
           <Link href="#home" className="hover:text-gray-400">
             Home
           </Link>
@@ -32,19 +32,19 @@ const Header = () => {
             Hotels
           </Link>
           <Link href="#rooms" className="hover:text-gray-400">
-            Rooms
+            Resorts
           </Link>
         </nav>
 
         {/* Contact Us Button */}
-        <div className="hidden md:block">
-          <Link href="#contact" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400">
+        <div className="hidden md:block lg:block xl:block 2xl:block ">
+          <Link href="#contact" className="bg-primary text-white px-4 py-2 rounded">
             Contact Us
           </Link>
         </div>
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden lg:hidden xl:hidden 2xl:hidden flex items-center">
           <button onClick={toggleMenu} className="text-white">
             <svg
               className="w-6 h-6"
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-blue-800 bg-opacity-50 text-white p-4">
+        <div className="md:hidden lg:hidden xl:hidden 2xl:hidden bg-black bg-opacity-50 text-white p-4">
           <Link href="#home" className="block py-2">
             Home
           </Link>
@@ -76,7 +76,7 @@ const Header = () => {
           <Link href="#rooms" className="block py-2">
             Rooms
           </Link>
-          <Link href="#contact" className="block py-2 bg-blue-500 text-white px-4 rounded">
+          <Link href="#contact" className="block py-2 bg-primary text-white px-4 rounded">
             Contact Us
           </Link>
         </div>
