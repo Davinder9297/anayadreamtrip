@@ -12,16 +12,16 @@ const RoomsModal = ({ data, setData, closeModal }) => {
           <button
             className="px-4 py-2 bg-gray-200"
             onClick={() =>
-              setData({ ...data, rooms: Math.max(1, data.rooms - 1) })
+              setData({ ...data, rooms: Math.max(1, data?.rooms - 1) })
             }
-            disabled={data.rooms <= 1}
+            disabled={data?.rooms <= 1}
           >
             -
           </button>
-          <div className="px-6 py-2 text-center">{data.rooms}</div>
+          <div className="px-6 py-2 text-center">{data?.rooms}</div>
           <button
             className="px-4 py-2 bg-gray-200"
-            onClick={() => setData({ ...data, rooms: data.rooms + 1 })}
+            onClick={() => setData({ ...data, rooms: data?.rooms + 1 })}
           >
             +
           </button>
@@ -35,16 +35,16 @@ const RoomsModal = ({ data, setData, closeModal }) => {
           <button
             className="px-4 py-2 bg-gray-200"
             onClick={() =>
-              setData({ ...data, adults: Math.max(1, data.adults - 1) })
+              setData({ ...data, adults: Math.max(1, data?.adults - 1) })
             }
-            disabled={data.adults <= 1}
+            disabled={data?.adults <= 1}
           >
             -
           </button>
-          <div className="px-6 py-2 text-center">{data.adults}</div>
+          <div className="px-6 py-2 text-center">{data?.adults}</div>
           <button
             className="px-4 py-2 bg-gray-200"
-            onClick={() => setData({ ...data, adults: data.adults + 1 })}
+            onClick={() => setData({ ...data, adults: data?.adults + 1 })}
           >
             +
           </button>
@@ -58,16 +58,16 @@ const RoomsModal = ({ data, setData, closeModal }) => {
           <button
             className="px-4 py-2 bg-gray-200"
             onClick={() =>
-              setData({ ...data, children: Math.max(0, data.children - 1) })
+              setData({ ...data, children: Math.max(0, data?.children - 1) })
             }
-            disabled={data.children <= 0}
+            disabled={data?.children <= 0}
           >
             -
           </button>
-          <div className="px-6 py-2 text-center">{data.children}</div>
+          <div className="px-6 py-2 text-center">{data?.children}</div>
           <button
             className="px-4 py-2 bg-gray-200"
-            onClick={() => setData({ ...data, children: data.children + 1 })}
+            onClick={() => setData({ ...data, children: data?.children + 1 })}
           >
             +
           </button>

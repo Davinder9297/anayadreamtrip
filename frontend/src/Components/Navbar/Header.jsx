@@ -2,15 +2,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useNavigate } from "react-router-dom";
-import Modal from "../Modal/Modal";
-import Login from "../Login/Login";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate()
+  const router = useRouter()
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
+  // const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const toggleMenu = () => {
@@ -33,7 +31,7 @@ const Header = () => {
 
         {/* Desktop Navbar */}
         <nav className="hidden md:flex lg:flex xl:flex 2xl:flex space-x-6">
-          <div className="hover:text-gray-400" onClick={()=>{navigate('/')}}>
+          <div className="hover:text-gray-400" onClick={()=>{router.push('/')}}>
             Home
           </div>
           <Link href="/hotels" className="hover:text-gray-400">
