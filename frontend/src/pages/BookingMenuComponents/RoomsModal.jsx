@@ -12,16 +12,16 @@ const RoomsModal = ({ data, setData, closeModal }) => {
           <button
             className="px-4 py-2 bg-gray-200"
             onClick={() =>
-              setData({ ...data, rooms: Math.max(1, data.rooms - 1) })
+              setData({ ...data, rooms: Math.max(1, data?.rooms - 1) })
             }
-            disabled={data.rooms <= 1}
+            disabled={data?.rooms <= 1}
           >
             -
           </button>
-          <div className="px-6 py-2 text-center">{data.rooms}</div>
+          <div className="px-6 py-2 text-center">{data?.rooms}</div>
           <button
             className="px-4 py-2 bg-gray-200"
-            onClick={() => setData({ ...data, rooms: data.rooms + 1 })}
+            onClick={() => setData({ ...data, rooms: data?.rooms + 1 })}
           >
             +
           </button>
