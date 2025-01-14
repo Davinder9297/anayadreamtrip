@@ -2,7 +2,7 @@ import React from "react";
 
 const RoomsModal = ({ data, setData, closeModal }) => {
   return (
-    <div className="py-4 px-16 min-w-[500px]">
+    <div className="py-4 px-16 min-w-[500px] font-jost">
       {/* <h2 className="text-lg font-bold mb-4">Rooms and Guests</h2> */}
 
       {/* Rooms Row */}

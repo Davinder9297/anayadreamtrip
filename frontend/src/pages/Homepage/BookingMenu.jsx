@@ -8,8 +8,7 @@ const BookingMenu = () => {
   const [place, setPlace] = useState("Goa");
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
-  const [roomsAndGuests, setRoomsAndGuests] = useState({ rooms: 0, adults: 0, children: 0 });
-  const [priceRange, setPriceRange] = useState("");
+  const [roomsAndGuests, setRoomsAndGuests] = useState({ rooms: 1, adults: 1, children: 0 });
 
   const handleCheckInChange = (newCheckInDate) => {
     setCheckInDate(newCheckInDate);

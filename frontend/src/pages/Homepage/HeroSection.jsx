@@ -3,12 +3,12 @@ import BookingMenu from "./BookingMenu";
 import CountElement from "./CountElement";
 import TestimonialSlider from "./Testinomials";
 import Speciality from "./Speciality";
-import Footer from "../Footer/Footer";
-import Header from "../Navbar/Header";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/Navbar/Header";
 import AccommodationList from "./Accomodation";
 
 const SnowflakeAnimation = React.lazy(() =>
-  import("../Homepage/SnowFlakeAnimation")
+  import("./SnowFlakeAnimation")
 );
 
 export default function HeroSection() {

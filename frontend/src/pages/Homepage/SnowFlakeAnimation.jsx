@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../css/Snowflakes.module.css";
-import Header from "../Navbar/Header";
+import Header from "../../Components/Navbar/Header";
 
 const SnowflakeAnimation = () => {
   const [snowflakes, setSnowflakes] = useState([]);
@@ -64,7 +64,7 @@ const SnowflakeAnimation = () => {
           }}
         ></div>
       ))}
-      <div className="text-white text-[64px] font-[500] font-marcellus text-center mt-16">Your Winter Getaway</div>
+      <div className="text-white text-[64px] font-[500] font-marcellus text-center mt-28">Your Winter Getaway</div>
       <div className="w-[60%] text-white text-center mx-auto text-[32px] font-marcellus tracking-wide mt-6">The perfect getaway is just a click away. Book now and start your adventure!</div>
     </div>
   );

@@ -1,9 +1,12 @@
+"use client"
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,10 +28,10 @@ const Header = () => {
 
         {/* Desktop Navbar */}
         <nav className="hidden md:flex lg:flex xl:flex 2xl:flex space-x-6">
-          <Link href="#home" className="hover:text-gray-400">
+          <div className="hover:text-gray-400" onClick={()=>{navigate('/')}}>
             Home
-          </Link>
-          <Link href="#hotels" className="hover:text-gray-400">
+          </div>
+          <Link href="/hotels" className="hover:text-gray-400">
             Hotels
           </Link>
           <Link href="#rooms" className="hover:text-gray-400">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../Modal/Modal";
+import Modal from "../../Components/Modal/Modal";
 import RoomsModal from "./RoomsModal";
 
 const RoomsAndGuestsDropdown = ({ data, setData }) => {
@@ -15,10 +15,10 @@ const RoomsAndGuestsDropdown = ({ data, setData }) => {
           <div className="-mt-4 font-jost text-gray-700 text-lg">
             Rooms and Guests
           </div>
-          <div className="cursor-pointer text-xl font-[500] font-jost mt-3">
+          <div className="cursor-pointer text-xl font-[500] font-jost mt-3 flex">
             {data.rooms !== 0 ? <span>{data?.rooms} Room, </span> : ""}{<div className="text-white">.</div>}
-            {data.adults !== 0 ? <span>{data?.adults} Adults, </span> : ""}{''}
-            {data.children !== 0 ? <span>{data?.children} Children </span> : ""}
+            {data.adults !== 0 ? <span>{data?.adults} Adults </span> : ""}{''}
+            {data.children !== 0 ? <span>, {data?.children} Children </span> : ""}
           </div>
         </div>
       </div>

@@ -137,3 +137,31 @@
   background: rgba(0, 0, 0, 0.4); /* Tailwind: bg-black bg-opacity-40 */
   z-index: -1;
 }
+
+/* Add this CSS to style the slider */
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary); /* Blue color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary); /* Blue color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spin {
+  -moz-appearance: textfield; /* Disable spinner for Firefox */
+}
