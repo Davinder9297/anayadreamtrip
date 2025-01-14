@@ -1,12 +1,14 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Modal from "../Modal/Modal";
+import Login from "../Login/Login";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -31,7 +33,12 @@ const Header = () => {
 
         {/* Desktop Navbar */}
         <nav className="hidden md:flex lg:flex xl:flex 2xl:flex space-x-6">
-          <div className="hover:text-gray-400" onClick={()=>{router.push('/')}}>
+          <div
+            className="hover:text-gray-400"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
             Home
           </div>
           <Link href="/hotels" className="hover:text-gray-400">
@@ -44,7 +51,10 @@ const Header = () => {
 
         {/* Contact Us Button */}
         <div className="hidden md:block lg:block xl:block 2xl:block ">
-          <div onClick={()=>setIsModalOpen(true)} className="bg-primary text-white px-4 py-2 rounded cursor-pointer">
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="bg-primary text-white px-4 py-2 rounded cursor-pointer"
+          >
             Login
           </div>
         </div>
@@ -82,12 +92,24 @@ const Header = () => {
           <Link href="#rooms" className="block py-2">
             Rooms
           </Link>
-          <Link href="#contact" className="block py-2 bg-primary text-white px-4 rounded">
+          <Link
+            href="#contact"
+            className="block py-2 bg-primary text-white px-4 rounded"
+          >
             Contact Us
           </Link>
         </div>
       )}
-      {isModalOpen && <Modal  isOpen={isModalOpen} onClose={closeModal} width="70%" height="70%"><Login/></Modal>}
+      {isModalOpen && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          width="70%"
+          height="70%"
+        >
+          <Login />
+        </Modal>
+      )}
     </div>
   );
 };

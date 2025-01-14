@@ -4,9 +4,16 @@ import { IoIosArrowDown } from "react-icons/io";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // Import default styles
 
-const CheckOutPicker = ({ label, checkInDate, checkOutDate, setCheckOutDate }) => {
+const CheckOutPicker = ({
+  label,
+  checkInDate,
+  checkOutDate,
+  setCheckOutDate,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(checkOutDate || addDays(new Date(), 1));
+  const [selectedDate, setSelectedDate] = useState(
+    checkOutDate || addDays(new Date(), 1)
+  );
   const calendarRef = useRef(null);
 
   // Clear selected date when checkInDate changes
@@ -38,17 +45,21 @@ const CheckOutPicker = ({ label, checkInDate, checkOutDate, setCheckOutDate }) =
   }, []);
 
   return (
-    <div className="relative border-r-2 py-6 pl-6" onClick={() => setIsOpen(!isOpen)}>
-      <div
-        className="cursor-pointer text-lg"
-       
-      >
-          <label className="text-lg text-gray-700 -mt-4 font-[500] font-jost flex gap-2 justify-center">
-            {label}
-          <IoIosArrowDown className="my-auto"/>
-          </label>
+    <div
+      className="relative border-r-2 py-6 pl-6"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="cursor-pointer text-lg">
+        <label className="text-lg text-gray-700 -mt-4 font-[500] font-jost flex gap-2 justify-center">
+          {label}
+          <IoIosArrowDown className="my-auto" />
+        </label>
         <div className="mt-2 text-2xl text-center">
-          {selectedDate ? format(new Date(selectedDate), "MMM dd,  yyyy") : <div className="text-white">.</div>}
+          {selectedDate ? (
+            format(new Date(selectedDate), "MMM dd,  yyyy")
+          ) : (
+            <div className="text-white">.</div>
+          )}
         </div>
       </div>
 
@@ -61,11 +72,14 @@ const CheckOutPicker = ({ label, checkInDate, checkOutDate, setCheckOutDate }) =
             onChange={handleDateChange}
             value={selectedDate || null}
             className="rounded-lg custom-calendar"
-            tileDisabled={({ date }) =>
-              !checkInDate || date < new Date(checkInDate) // Disable dates before check-in date
+            tileDisabled={
+              ({ date }) => !checkInDate || date < new Date(checkInDate) // Disable dates before check-in date
             }
             tileClassName={({ date, view }) => {
-              if (selectedDate && date.toDateString() === new Date(selectedDate).toDateString()) {
+              if (
+                selectedDate &&
+                date.toDateString() === new Date(selectedDate).toDateString()
+              ) {
                 return "bg-primary text-white rounded-lg"; // Selected date styling
               }
               return !checkInDate || date < new Date(checkInDate)

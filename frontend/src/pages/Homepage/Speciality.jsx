@@ -10,7 +10,7 @@ const Speciality = () => {
     "url('/images/herosection/hero1.webp')",
     "url('/images/herosection/hero2.webp')",
   ];
-  
+
   // Use IntersectionObserver to detect when the section comes into view
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,20 +52,20 @@ const Speciality = () => {
         "Enjoy a hassle-free holiday with an all-inclusive package featuring skiing, dining, and festive surprises.",
     },
     {
-        title: "Frosty Family Holiday",
-        description:
-          "Bring the whole family for a holiday filled with skiing, snow play, and seasonal treats everyone will love.",
-      },
-      {
-        title: "Ski Adventures Package",
-        description:
-          "From scenic sleigh rides to exhilarating ski trails, this package brings the magic of the holidays to life.",
-      },
-      {
-        title: "Winter Wonderland",
-        description:
-          "Enjoy a hassle-free holiday with an all-inclusive package featuring skiing, dining, and festive surprises.",
-      },
+      title: "Frosty Family Holiday",
+      description:
+        "Bring the whole family for a holiday filled with skiing, snow play, and seasonal treats everyone will love.",
+    },
+    {
+      title: "Ski Adventures Package",
+      description:
+        "From scenic sleigh rides to exhilarating ski trails, this package brings the magic of the holidays to life.",
+    },
+    {
+      title: "Winter Wonderland",
+      description:
+        "Enjoy a hassle-free holiday with an all-inclusive package featuring skiing, dining, and festive surprises.",
+    },
   ];
 
   return (
@@ -75,7 +75,9 @@ const Speciality = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <h2 className="text-center text-5xl font-jost font-bold mb-12">OUR SPECIALITY</h2>
+      <h2 className="text-center text-5xl font-jost font-bold mb-12">
+        OUR SPECIALITY
+      </h2>
       <div className="grid grid-cols-3 md:grid-cols-3 gap-6 container mx-auto px-6">
         {offers.map((offer, index) => (
           <div

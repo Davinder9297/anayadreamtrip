@@ -16,15 +16,26 @@ const RoomsAndGuestsDropdown = ({ data, setData }) => {
             Rooms and Guests
           </div>
           <div className="cursor-pointer text-xl font-[500] font-jost mt-3 flex">
-            {data?.rooms !== 0 ? <span>{data?.rooms} Room, </span> : ""}{<div className="text-white">.</div>}
-            {data?.adults !== 0 ? <span>{data?.adults} Adults </span> : ""}{''}
-            {data?.children !== 0 ? <span>, {data?.children} Children </span> : ""}
+            {data?.rooms !== 0 ? <span>{data?.rooms} Room, </span> : ""}
+            {<div className="text-white">.</div>}
+            {data?.adults !== 0 ? <span>{data?.adults} Adults </span> : ""}
+            {""}
+            {data?.children !== 0 ? (
+              <span>, {data?.children} Children </span>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
 
       {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Rooms and Guests" width="580px">
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title="Rooms and Guests"
+        width="580px"
+      >
         <RoomsModal data={data} setData={setData} closeModal={closeModal} />
       </Modal>
     </>

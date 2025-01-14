@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const images = [
-    "/images/herosection/hero3.webp",
+  "/images/herosection/hero3.webp",
   "/images/herosection/hero1.webp",
   "/images/herosection/hero2.webp",
 ];
@@ -26,15 +26,15 @@ const Carousel = () => {
           src={image}
           alt={`Slide ${index + 1}`}
           className={`absolute w-full h-full object-cover transition-transform duration-1000 ${
-            index === currentIndex ? 'translate-x-0' : 'translate-x-full'
+            index === currentIndex ? "translate-x-0" : "translate-x-full"
           }`}
           style={{
             transform:
               index === currentIndex
-                ? 'translateX(0)'
+                ? "translateX(0)"
                 : index < currentIndex
-                ? 'translateX(-100%)'
-                : 'translateX(100%)',
+                ? "translateX(-100%)"
+                : "translateX(100%)",
           }}
         />
       ))}

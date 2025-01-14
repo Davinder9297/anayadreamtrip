@@ -1,45 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EmailHandler = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  
+  const [email, setEmail] = useState("");
+
   const handleGoogleLogin = () => {
-    console.log('Login with Google clicked!');
+    console.log("Login with Google clicked!");
     // Handle Google login logic
   };
 
   return (
-    <div className="w-full h-full bg-primary rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-white text-center mb-4">Login</h2>
-      <div className="relative">
+    <div className="w-full h-full pt-12">
+      {" "}
+      {/* Added pt-12 to add space from top */}
+      <h2 className="text-4xl font-bold text-black text-center mb-4 font-marcellus">
+        Login
+      </h2>
+      <div className="flex-1 relative mt-8 w-[90%] mx-auto">
+        <label className="font-semibold absolute -top-3 left-3 bg-white px-1  text-gray-700">
+          Email <span className="text-red-500">*</span>
+        </label>
         <input
           type="email"
-          className="peer border-b-2 border-white bg-transparent w-full text-white focus:outline-none focus:border-secondary"
+          name="email"
           placeholder="Enter email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none"
         />
-        <label className="absolute left-0 -top-4 text-white text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:translate-x-0 peer-focus:-translate-y-6 peer-focus:text-secondary">
-          Email Address
-        </label>
       </div>
-      <button
-        onClick={() => onLogin(email)}
-        className="mt-6 bg-secondary text-white px-6 py-2 rounded hover:bg-white hover:text-primary transition w-full"
-      >
-        Next
-      </button>
-      <button
+      <div className="mx-auto w-[90%]">
+        <button
+          onClick={() => onLogin(email)}
+          className="mt-6 hover:bg-secondary hover:text-white px-6 py-2 rounded bg-primary text-white transition w-full"
+        >
+          Next
+        </button>
+      </div>
+      <div className="mx-auto w-[90%] mt-16">
+        <button
           onClick={handleGoogleLogin}
-          className="mt-6 w-full max-w-sm flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow"
+          className="mt-6 w-full flex items-center justify-center bg-[#EFF4FB] hover:bg-opacity-70 text-[#64748B] font-[500] py-2 px-4 rounded shadow"
         >
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+            src="/icons/Google_Icon.svg"
             alt="Google Icon"
-            className="w-5 h-5 mr-2"
+            className="w-8 h-8 mr-2"
           />
           Login with Google
         </button>
+      </div>
     </div>
   );
 };

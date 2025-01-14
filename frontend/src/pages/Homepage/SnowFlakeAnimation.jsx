@@ -8,7 +8,7 @@ const SnowflakeAnimation = () => {
 
   // Array of images to use as background
   const images = [
-      "url('/images/herosection/hero3.webp')",
+    "url('/images/herosection/hero3.webp')",
     "url('/images/herosection/hero1.webp')",
     "url('/images/herosection/hero2.webp')",
   ];
@@ -42,11 +42,11 @@ const SnowflakeAnimation = () => {
     <div
       className={`${styles.container} bg-blend-darken overflow-hidden relative h-[550px]`}
       style={{
-        backgroundImage: images[bgIndex], 
+        backgroundImage: images[bgIndex],
         backgroundColor: "rgba(0, 0, 0, 0.5)",
       }}
     >
-        <Header/>
+      <Header />
       {snowflakes.map((flake, index) => (
         <div
           key={index}
@@ -64,8 +64,13 @@ const SnowflakeAnimation = () => {
           }}
         ></div>
       ))}
-      <div className="text-white text-[64px] font-[500] font-marcellus text-center mt-28">Your Winter Getaway</div>
-      <div className="w-[60%] text-white text-center mx-auto text-[32px] font-marcellus tracking-wide mt-6">The perfect getaway is just a click away. Book now and start your adventure!</div>
+      <div className="text-white text-[64px] font-[500] font-marcellus text-center mt-28">
+        Your Winter Getaway
+      </div>
+      <div className="w-[60%] text-white text-center mx-auto text-[32px] font-marcellus tracking-wide mt-6">
+        The perfect getaway is just a click away. Book now and start your
+        adventure!
+      </div>
     </div>
   );
 };

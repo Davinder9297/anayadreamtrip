@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../css/HotelInfoCard.css'
+import "../../css/HotelInfoCard.css";
 
 const HotelInfoCard = () => {
   const images = [
@@ -68,7 +68,8 @@ const HotelInfoCard = () => {
           <span>+ 3 more</span>
         </div>
         <p className="price">
-          ₹835 <span className="original-price">₹4584</span> <span>77% off</span>
+          ₹835 <span className="original-price">₹4584</span>{" "}
+          <span>77% off</span>
         </p>
         <p className="tax-info">+ ₹190 taxes & fees · per room per night</p>
         <div className="buttons">

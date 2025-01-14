@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import EmailHandler from './EmailHandler';
-import OTPHandler from './OTPHandler';
-import Carousel from '../Crousel/Crousel';
+import React, { useState } from "react";
+import EmailHandler from "./EmailHandler";
+import OTPHandler from "./OTPHandler";
+import Carousel from "../Carousel/Carousel";
 
 const Login = () => {
   const [step, setStep] = useState(1); // Step 1: Login, Step 2: OTP
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleLogin = (email) => {
     // Simple email validation
@@ -14,12 +14,12 @@ const Login = () => {
       setEmail(email);
       setStep(2); // Move to the OTP step
     } else {
-      alert('Please enter a valid email address.');
+      alert("Please enter a valid email address.");
     }
   };
 
   const handleOtpSubmit = (otp) => {
-    console.log('OTP submitted:', otp);
+    console.log("OTP submitted:", otp);
     // Handle OTP verification logic
   };
 
@@ -31,15 +31,16 @@ const Login = () => {
       </div>
 
       {/* Right side: Login or OTP */}
-      <div className="w-1/2 flex flex-col items-center justify-center bg-primary p-8">
+      <div className="w-1/2">
         {/* Conditionally Render Email or OTP Handler */}
-        <div className="w-full max-w-sm">
+        <div className="w-full">
           {step === 1 && <EmailHandler onLogin={handleLogin} />}
-          {step === 2 && <OTPHandler email={email} onSubmit={handleOtpSubmit} />}
+          {step === 2 && (
+            <OTPHandler email={email} onSubmit={handleOtpSubmit} />
+          )}
         </div>
 
         {/* Login with Google Button */}
-        
       </div>
     </div>
   );

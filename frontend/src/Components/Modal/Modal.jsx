@@ -1,15 +1,22 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
 
-const Modal = ({ isOpen, onClose, children, title, width = '50%', height = 'auto' }) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  children,
+  title,
+  width = "50%",
+  height = "auto",
+}) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Disable scrolling
+      document.body.style.overflow = "hidden"; // Disable scrolling
     } else {
-      document.body.style.overflow = ''; // Restore scrolling
+      document.body.style.overflow = ""; // Restore scrolling
     }
     return () => {
-      document.body.style.overflow = ''; // Cleanup on unmount
+      document.body.style.overflow = ""; // Cleanup on unmount
     };
   }, [isOpen]);
 
@@ -25,8 +32,8 @@ const Modal = ({ isOpen, onClose, children, title, width = '50%', height = 'auto
         style={{
           width,
           height,
-          maxWidth: '90%', // Ensures it doesn't exceed the screen width
-          maxHeight: '90%', // Ensures it doesn't exceed the screen height
+          maxWidth: "90%", // Ensures it doesn't exceed the screen width
+          maxHeight: "90%", // Ensures it doesn't exceed the screen height
         }}
         onClick={(e) => e.stopPropagation()} // Prevent backdrop clicks
       >
