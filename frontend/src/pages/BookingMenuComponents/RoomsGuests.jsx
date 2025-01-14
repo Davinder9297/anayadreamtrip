@@ -24,7 +24,7 @@ const RoomsAndGuestsDropdown = ({ data, setData }) => {
       </div>
 
       {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Rooms and Guests">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title="Rooms and Guests" width="580px">
         <RoomsModal data={data} setData={setData} closeModal={closeModal} />
       </Modal>
     </>

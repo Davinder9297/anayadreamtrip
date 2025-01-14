@@ -3,10 +3,15 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useNavigate } from "react-router-dom";
+import Modal from "../Modal/Modal";
+import Login from "../Login/Login";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate()
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -41,9 +46,9 @@ const Header = () => {
 
         {/* Contact Us Button */}
         <div className="hidden md:block lg:block xl:block 2xl:block ">
-          <Link href="#contact" className="bg-primary text-white px-4 py-2 rounded">
-            Contact Us
-          </Link>
+          <div onClick={()=>setIsModalOpen(true)} className="bg-primary text-white px-4 py-2 rounded cursor-pointer">
+            Login
+          </div>
         </div>
 
         {/* Mobile Hamburger Icon */}
@@ -84,6 +89,7 @@ const Header = () => {
           </Link>
         </div>
       )}
+      {isModalOpen && <Modal  isOpen={isModalOpen} onClose={closeModal} width="70%" height="70%"><Login/></Modal>}
     </div>
   );
 };

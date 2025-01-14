@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-const Modal = ({ isOpen, onClose, children, title }) => {
-
+const Modal = ({ isOpen, onClose, children, title, width = '50%', height = 'auto' }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'; // Disable scrolling
@@ -22,17 +21,23 @@ const Modal = ({ isOpen, onClose, children, title }) => {
       onClick={onClose}
     >
       <div
-        className="relative rounded bg-white p-6 shadow-lg"
+        className="relative rounded-lg bg-white shadow-lg"
+        style={{
+          width,
+          height,
+          maxWidth: '90%', // Ensures it doesn't exceed the screen width
+          maxHeight: '90%', // Ensures it doesn't exceed the screen height
+        }}
         onClick={(e) => e.stopPropagation()} // Prevent backdrop clicks
       >
-        {title && <h2 className="mb-4 text-lg font-bold">{title}</h2>}
+        {title && <h2 className="mb-4 text-lg font-bold p-6">{title}</h2>}
         {children}
-        <div
-          className="absolute -right-6 -top-6 ml-1 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-gray-800 shadow-md shadow-black"
+        <button
+          className="absolute -right-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
           onClick={onClose}
         >
-          <span className="mb-1.5 text-2xl font-bold leading-none">x</span>
-        </div>
+          <span className="text-lg font-bold">x</span>
+        </button>
       </div>
     </div>,
     document.body

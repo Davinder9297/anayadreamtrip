@@ -2,7 +2,7 @@ import React from "react";
 
 const RoomsModal = ({ data, setData, closeModal }) => {
   return (
-    <div className="py-4 px-16 min-w-[500px] font-jost">
+    <div className="py-4 px-16 min-w-[500px] font-jost p-6">
       {/* <h2 className="text-lg font-bold mb-4">Rooms and Guests</h2> */}
 
       {/* Rooms Row */}
@@ -79,7 +79,7 @@ const RoomsModal = ({ data, setData, closeModal }) => {
         className="px-6 py-2 bg-primary text-white rounded-md flex justify-center items-center w-24 mx-auto mt-8"
         onClick={closeModal}
       >
-        Save
+        Close
       </button>
     </div>
   );
