@@ -2,6 +2,7 @@ import "./footer.css";
 import { IoMdCall, IoMdMail } from "react-icons/io";
 import { FaFacebook, FaLocationDot, FaYoutube } from "react-icons/fa6";
 import { CgInstagram } from "react-icons/cg";
+import Image from "next/image";
 
 const Footer = () => {
   // const navigate = useNavigate();
@@ -11,9 +12,11 @@ const Footer = () => {
         <div className="w-[35%] xsm:w-full sm:w-full md:w-full">
           <div className=" flex-col">
             <div className="">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="logo"
+                height={100}
+                width={100}
                 className="w-40 h-16 xsm:w-32 sm:w-28 xsm:mx-auto sm:h-16 md:w-32 md:h-10 lg:w-40 lg:h-16 object-contain sm:mx-auto md:mx-auto"
               />
               {/* <h1>right by you</h1> */}

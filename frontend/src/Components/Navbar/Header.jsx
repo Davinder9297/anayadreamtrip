@@ -18,15 +18,15 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-black text-white p-4 fixed top-0 w-full z-50 bg-opacity-50 backdrop-blur-lg opacity-80">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+    <div className=" text-white  absolute top-0 w-full z-50 ">
+      <div className="max-w-screen-xl mx-auto p-2 px-14 flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={150}
-            height={25}
+            width={80}
+            height={30}
             // className="w-auto h-10"
           />
         </div>
