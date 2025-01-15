@@ -4,9 +4,9 @@ import ErrorBoundary from "./error-boundary";
 
 const Header = () => {
   return (
-    <ErrorBoundary>
+    // <ErrorBoundary>
       <div className="mt-0"><HeroSection /></div>
-    </ErrorBoundary>
+    // </ErrorBoundary>
   );
 };
 

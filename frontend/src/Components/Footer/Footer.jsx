@@ -6,7 +6,7 @@ import { CgInstagram } from "react-icons/cg";
 const Footer = () => {
   // const navigate = useNavigate();
   return (
-    <div className=" pt-10 px-16 bg-secondary text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
+    <div className="bg-black pt-10 px-16 bg-secondary text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
       <div className="w-full flex justify-between xsm:flex-col sm:flex-col md:flex-col">
         <div className="w-[35%] xsm:w-full sm:w-full md:w-full">
           <div className=" flex-col">
