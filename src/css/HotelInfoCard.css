@@ -1,0 +1,106 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 350px;
+  font-family: Arial, sans-serif;
+}
+
+.image-section {
+  position: relative;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button:first-of-type {
+  left: 0;
+}
+
+.nav-button:last-of-type {
+  right: 0;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+}
+
+.details-section {
+  padding: 16px;
+}
+
+.rating {
+  background: #4caf50;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #e53935;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.view-details,
+.book-now {
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.view-details {
+  background: #007bff;
+  color: white;
+}
+
+.book-now {
+  background: #4caf50;
+  color: white;
+}
