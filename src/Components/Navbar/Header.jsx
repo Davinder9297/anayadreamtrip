@@ -2,32 +2,30 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Modal from "../Modal/Modal";
 import Login from "../Login/Login";
-import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  // const location = useLocation();
+  const pathname = usePathname(); // Use usePathname instead of useLocation
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // useEffect(() => {
-  //   // Check if the pathname exactly matches "/partner-overview"
-  //   if (location.pathname === '/') {
-  //     setIsHeaderVisible(true)
-  //   } else {
-  //     setIsHeaderVisible(false)
-  //   }
-  // }, [location.pathname])
+  useEffect(() => {
+    // Check if the pathname matches "/"
+    if (pathname === "/") {
+      setIsHeaderVisible(true);
+    } else {
+      setIsHeaderVisible(false);
+    }
+  }, [pathname]);
 
   return (
     <div className={`text-white absolute top-0 w-full z-50`}>
@@ -39,12 +37,15 @@ const Header = () => {
             alt="Logo"
             width={80}
             height={30}
-            // className="w-auto h-10"
           />
         </div>
 
         {/* Desktop Navbar */}
-        <nav className={`hidden md:flex lg:flex xl:flex 2xl:flex space-x-6 ${isHeaderVisible?'text-white':'text-black'}`}>
+        <nav
+          className={`hidden md:flex lg:flex xl:flex 2xl:flex space-x-6 ${
+            isHeaderVisible ? "text-white" : "text-black"
+          }`}
+        >
           <div
             className="hover:text-gray-400"
             onClick={() => {
