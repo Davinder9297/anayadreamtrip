@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-8 text-xs text-center lg:text-sm xl:text-sm 2xl:text-base">
-        © ALMARIS 2024 ALL RIGHTS RESERVED.
+        © ANAYA DREAM TRIP 2024 ALL RIGHTS RESERVED.
       </div>
     </div>
   );
