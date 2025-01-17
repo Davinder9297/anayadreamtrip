@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Default height for larger screens */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* For smaller screens (max-width 600px), set height to 300px */
+@media (max-width: 600px) {
+  .container {
+    height: 300px;
+  }
+}
+
+.snowflake {
+  position: absolute;
+  width: 4px; /* Base size for small snowflakes */
+  height: 4px; /* Base size for small snowflakes */
+  background-color: white; /* Snowflake color */
+  border-radius: 50%; /* Makes the snowflakes perfectly round */
+  opacity: 0.8; /* Base opacity for realistic transparency */
+  animation: fall 5s linear infinite, sway 4s ease-in-out infinite;
+  animation-timing-function: ease-in-out; /* Smooth falling */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Adds a subtle glow effect */
+}
+
+/* Animation for falling snowflakes */
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0); /* Start at the top at the initial position */
+  }
+  100% {
+    transform: translateY(550px) translateX(var(--horizontal-movement)); /* Fall to the bottom with horizontal drift */
+  }
+}
