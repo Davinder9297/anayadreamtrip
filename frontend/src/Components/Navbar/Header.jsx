@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div className={`text-white absolute top-0 w-full z-50 font-jost`}>
-      <div className="max-w-screen-xl mx-auto p-2 px-14 flex items-center justify-between w-full">
+      <div style={{paddingLeft:'56px',paddingRight:'56px',paddingTop:'10px',paddingBottom:'10px'}} className=" mx-auto  flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image
