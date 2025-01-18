@@ -1,18 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import Modal from "../Modal/Modal";
 import Login from "../Login/Login";
-
+import { FaRegUserCircle } from "react-icons/fa";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname(); // Use usePathname instead of useLocation
   const [isModalOpen, setIsModalOpen] = useState(false);
   const closeModal = () => setIsModalOpen(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,7 +19,7 @@ const Header = () => {
 
 
   return (
-    <div className={`text-white absolute top-0 w-full z-50 font-jost`}>
+    <div className={`text-white absolute top-0 w-full z-50 font-jost `}>
       <div style={{paddingLeft:'56px',paddingRight:'56px',paddingTop:'10px',paddingBottom:'10px'}} className=" mx-auto  flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -55,14 +53,14 @@ const Header = () => {
         </div>
 
         {/* Contact Us Button */}
-        <div className="xsm:hidden block ">
+        <Link href='/login' className="xsm:hidden flex gap-2 items-center">
+        <FaRegUserCircle className="text-xl"/>
           <div
-            onClick={() => setIsModalOpen(true)}
-            className="bg-primary text-white px-4 py-2 rounded cursor-pointer"
+            className=" text-white  rounded cursor-pointer"
           >
-            Login
+            Login/SignUp
           </div>
-        </div>
+        </Link>
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden lg:hidden xl:hidden 2xl:hidden flex items-center">

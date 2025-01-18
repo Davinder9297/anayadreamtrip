@@ -8,7 +8,7 @@ const Page = () => {
     return (
         <>
             {/* <Router> */}
-            <div className=""><Header /></div>
+            <div className=""><Header/></div>
             <div className="pt-28 flex"><FilterSidebar /><HotelList /></div>
             {/* </Router> */}
         </>

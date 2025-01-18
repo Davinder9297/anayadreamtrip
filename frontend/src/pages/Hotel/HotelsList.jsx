@@ -84,7 +84,7 @@ const HotelList = () => {
   };
 
   return (
-    <div className="font-sans p-4 w-[75%] mx-auto">
+    <div className=" p-4 w-[75%] mx-auto font-marcellus">
       <div className="flex justify-between">
         <h1 className="text-2xl font-semibold mb-4">Hotel Listings</h1>
 

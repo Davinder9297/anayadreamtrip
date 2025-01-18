@@ -22,7 +22,7 @@ const FilterSidebar = () => {
   };
 
   return (
-    <div className="px-6 bg-white shadow-md w-72 h-full border-r pl-6 ">
+    <div className="px-6 bg-white shadow-md w-72 h-full border-r pl-6 font-jost">
       <h2 className="text-xl font-[700] mb-4">Filters</h2>
 
       {/* Price Range */}
