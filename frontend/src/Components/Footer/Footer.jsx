@@ -21,7 +21,7 @@ const Footer = () => {
               />
               {/* <h1>right by you</h1> */}
             </div>
-            <p className="my-6 xsm:text-xxs sm:text-xs xsm:my-2 sm:my-2 font-jost max-w-80">
+            <p className="my-6 xsm:text-xxs sm:text-xs xsm:my-2 sm:my-2 font-jost w-full">
               Experience luxury and comfort, where every detail is designed to
               make your stay memorable. From exquisite dining to personalized
               service, we are here to make your visit exceptional. Building the
@@ -30,7 +30,7 @@ const Footer = () => {
             </p>{" "}
           </div>
         </div>
-        <div className="w-[60%] flex justify-items-end mt-6 xsm:w-full sm:w-full xsm:mt-4 md:w-full md:mt-12">
+        <div className="w-[60%]  flex justify-items-end mt-6 xsm:w-full sm:w-full xsm:mt-4 md:w-full md:mt-12">
           <div className="w-[50%] data xsm:hidden sm:hidden">
             <h1 className="mb-4 font-[700] text-2xl">Company</h1>
             <div className="flex flex-col items-start">
@@ -41,7 +41,7 @@ const Footer = () => {
               {/*  <3'>Sales</button> */}
             </div>
           </div>
-          <div className="w-[60%] data2 xsm:w-[90%] sm:w-[90%] xsm:mx-auto sm:mx-auto">
+          <div className="w-[50%] data2 xsm:w-[90%] sm:w-[90%] xsm:mx-auto sm:mx-auto ">
             <h1 className="font-[700] xsm:text-sm sm:text-sm xsm:text-center sm:text-center text-2xl">
               Contact Us
             </h1>
