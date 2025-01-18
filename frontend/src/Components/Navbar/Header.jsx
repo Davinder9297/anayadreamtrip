@@ -35,7 +35,8 @@ const Header = () => {
 
         {/* Desktop Navbar */}
         <div
-          className={`flex gap-5 xsm:hidden xsm:gap-0`}
+        style={{gap:'20px'}}
+          className={`flex flex-row  xsm:hidden xsm:gap-0`}
         >
           <div
             className="hover:text-gray-400"
