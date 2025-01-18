@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   // const navigate = useNavigate();
   return (
-    <div className="bg-[#181818!important] pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
+    <div style={{backgroundColor:'#181818'}} className=" pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
       <div className="w-full flex justify-between xsm:flex-col sm:flex-col md:flex-col">
         <div className="w-[35%] xsm:w-full sm:w-full md:w-full">
           <div className=" flex-col">
@@ -21,7 +21,7 @@ const Footer = () => {
               />
               {/* <h1>right by you</h1> */}
             </div>
-            <p className="my-6 xsm:text-xxs sm:text-xs xsm:my-2 sm:my-2 font-jost">
+            <p className="my-6 xsm:text-xxs sm:text-xs xsm:my-2 sm:my-2 font-jost max-w-80">
               Experience luxury and comfort, where every detail is designed to
               make your stay memorable. From exquisite dining to personalized
               service, we are here to make your visit exceptional. Building the

@@ -21,7 +21,7 @@ const Header = () => {
 
 
   return (
-    <div className={`text-white absolute top-0 w-full z-50`}>
+    <div className={`text-white absolute top-0 w-full z-50 font-jost`}>
       <div className="max-w-screen-xl mx-auto p-2 px-14 flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -34,7 +34,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navbar */}
-        <nav
+        <div
           className={`flex gap-5 xsm:hidden xsm:gap-0`}
         >
           <div
@@ -51,7 +51,7 @@ const Header = () => {
           <Link href="#rooms" className="hover:text-gray-400">
             Resorts
           </Link>
-        </nav>
+        </div>
 
         {/* Contact Us Button */}
         <div className="xsm:hidden block ">
