@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   // const navigate = useNavigate();
   return (
-    <div className="bg-secondary pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
+    <div className="bg-[#000000!important] pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
       <div className="w-full flex justify-between xsm:flex-col sm:flex-col md:flex-col">
         <div className="w-[35%] xsm:w-full sm:w-full md:w-full">
           <div className=" flex-col">
