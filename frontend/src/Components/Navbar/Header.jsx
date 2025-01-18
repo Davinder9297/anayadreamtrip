@@ -1,24 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Modal from "../Modal/Modal";
 import Login from "../Login/Login";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname(); // Use usePathname instead of useLocation
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+
   return (
-    <div className=" text-white  absolute top-0 w-full z-50 ">
+    <div className={`text-white absolute top-0 w-full z-50`}>
       <div className="max-w-screen-xl mx-auto p-2 px-14 flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -27,12 +30,13 @@ const Header = () => {
             alt="Logo"
             width={80}
             height={30}
-            // className="w-auto h-10"
           />
         </div>
 
         {/* Desktop Navbar */}
-        <nav className="flex gap-4 xsm:hidden">
+        <nav
+          className={`flex gap-5 xsm:hidden xsm:gap-0`}
+        >
           <div
             className="hover:text-gray-400"
             onClick={() => {
@@ -50,7 +54,7 @@ const Header = () => {
         </nav>
 
         {/* Contact Us Button */}
-        <div className="block xsm:hidden ">
+        <div className="xsm:hidden block ">
           <div
             onClick={() => setIsModalOpen(true)}
             className="bg-primary text-white px-4 py-2 rounded cursor-pointer"
@@ -104,8 +108,8 @@ const Header = () => {
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
-          width="70%"
-          height="70%"
+          width="60%"
+          height="60%"
         >
           <Login />
         </Modal>

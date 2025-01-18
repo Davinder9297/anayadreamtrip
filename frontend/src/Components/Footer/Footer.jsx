@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   // const navigate = useNavigate();
   return (
-    <div className="bg-[#000000!important] pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
+    <div className="bg-[#181818!important] pt-10 px-16  text-white w-full xsm:px-4 xsm:p-4 sm:px-4 font-jost">
       <div className="w-full flex justify-between xsm:flex-col sm:flex-col md:flex-col">
         <div className="w-[35%] xsm:w-full sm:w-full md:w-full">
           <div className=" flex-col">
@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="w-[60%] flex justify-items-end mt-6 xsm:w-full sm:w-full xsm:mt-4 md:w-full md:mt-12">
           <div className="w-[50%] data xsm:hidden sm:hidden">
             <h1 className="mb-4 font-[700] text-2xl">Company</h1>
-            <div className="flex flex-col justify-start items-start">
+            <div className="flex flex-col items-start">
               {/* <</button> */}
               <button className="mt-3">Terms & Conditions</button>
               <button className="mt-3">Privacy Policy</button>
@@ -45,8 +45,8 @@ const Footer = () => {
             <h1 className="font-[700] xsm:text-sm sm:text-sm xsm:text-center sm:text-center text-2xl">
               Contact Us
             </h1>
-            <div className="flex flex-col gap-3 mt-10">
-              <div className="flex gap-2">
+            <div className="flex flex-col gap-3 mt-4">
+              <div className="flex gap-3">
                 <div>
                   <FaLocationDot size={20} />
                 </div>
@@ -54,13 +54,13 @@ const Footer = () => {
                   123 Luxury Lane, Dream City, Country
                 </p>
               </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <div>
                     <IoMdMail size={20} />
                   </div>
                   <p className="xsm:text-xxs sm:text-xxs">info@almaris.in</p>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <IoMdCall
                     className="bg-white text-secondary rounded-full p-1 "
                     size={20}
@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-8 text-xs text-center lg:text-sm xl:text-sm 2xl:text-base">
-        © ALMARIS 2024 ALL RIGHTS RESERVED.
+        © ANAYA DREAM TRIP 2024 ALL RIGHTS RESERVED.
       </div>
     </div>
   );

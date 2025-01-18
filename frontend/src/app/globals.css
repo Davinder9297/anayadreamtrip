@@ -165,3 +165,21 @@
 .no-spin {
   -moz-appearance: textfield; /* Disable spinner for Firefox */
 }
+
+/* Tailwind Custom Scrollbar */
+@layer utilities {
+  .sidebar::-webkit-scrollbar {
+    width: 3px;
+    margin-left: 8px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 1px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 1px;
+  }
+}

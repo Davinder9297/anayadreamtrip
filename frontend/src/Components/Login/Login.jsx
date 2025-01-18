@@ -27,7 +27,7 @@ const Login = () => {
     <div className="w-full h-full flex">
       {/* Left side: Carousel */}
       <div className="w-1/2 bg-secondary flex items-center justify-center">
-        <Carousel />
+        <img src="/images/herosection/login/login.jpg" alt="login image" className="h-full" />
       </div>
 
       {/* Right side: Login or OTP */}
