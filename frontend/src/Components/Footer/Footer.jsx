@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="w-[60%] flex justify-items-end mt-6 xsm:w-full sm:w-full xsm:mt-4 md:w-full md:mt-12">
           <div className="w-[50%] data xsm:hidden sm:hidden">
             <h1 className="mb-4 font-[700] text-2xl">Company</h1>
-            <div>
+            <div className="flex flex-col justify-start items-start">
               {/* <</button> */}
               <button className="mt-3">Terms & Conditions</button>
               <button className="mt-3">Privacy Policy</button>
@@ -45,8 +45,8 @@ const Footer = () => {
             <h1 className="font-[700] xsm:text-sm sm:text-sm xsm:text-center sm:text-center text-2xl">
               Contact Us
             </h1>
-            <div className="content">
-              <div>
+            <div className="flex flex-col gap-3 mt-10">
+              <div className="flex gap-2">
                 <div>
                   <FaLocationDot size={20} />
                 </div>
@@ -54,21 +54,19 @@ const Footer = () => {
                   123 Luxury Lane, Dream City, Country
                 </p>
               </div>
-              <div className="mb-4 xsm:justify-center">
-                <div className="flex">
+                <div className="flex gap-2">
                   <div>
                     <IoMdMail size={20} />
                   </div>
                   <p className="xsm:text-xxs sm:text-xxs">info@almaris.in</p>
                 </div>
-                <div>
+                <div className="flex gap-2">
                   <IoMdCall
-                    className="bg-white text-secondary rounded-full p-1 ml-8"
+                    className="bg-white text-secondary rounded-full p-1 "
                     size={20}
                   />
                   <p className="xsm:text-xxs sm:text-xxs">7896541230</p>
                 </div>
-              </div>
               <h1 className="font-[600] pb-2 xsm:text-sm sm:text-sm xsm:text-center sm:text-center md:text-center text-xl">
                 Follow us on social media
               </h1>

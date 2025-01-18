@@ -32,7 +32,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navbar */}
-        <nav className="hidden md:flex lg:flex xl:flex 2xl:flex space-x-6">
+        <nav className="flex gap-4 xsm:hidden">
           <div
             className="hover:text-gray-400"
             onClick={() => {
@@ -50,7 +50,7 @@ const Header = () => {
         </nav>
 
         {/* Contact Us Button */}
-        <div className="hidden md:block lg:block xl:block 2xl:block ">
+        <div className="block xsm:hidden ">
           <div
             onClick={() => setIsModalOpen(true)}
             className="bg-primary text-white px-4 py-2 rounded cursor-pointer"
@@ -94,9 +94,9 @@ const Header = () => {
           </Link>
           <Link
             href="#contact"
-            className="block py-2 bg-primary text-white px-4 rounded"
+            className="block py-2 bg-primary text-white px-4 rounded w-fit"
           >
-            Contact Us
+            Login
           </Link>
         </div>
       )}
