@@ -10,6 +10,7 @@ const RoomsAndGuestsDropdown = ({ data, setData }) => {
 
   return (
     <>
+    <div className="relative">
       <div className="py-6 pl-6" onClick={openModal}>
         <div className="cursor-pointer text-lg">
           <div className="-mt-4 font-jost text-gray-700 text-lg">
@@ -38,6 +39,7 @@ const RoomsAndGuestsDropdown = ({ data, setData }) => {
       >
         <RoomsModal data={data} setData={setData} closeModal={closeModal} />
       </Modal>
+      </div>
     </>
   );
 };
