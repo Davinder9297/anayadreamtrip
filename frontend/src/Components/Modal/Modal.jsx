@@ -41,7 +41,15 @@ const Modal = ({
 
   return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+      }}
       onClick={onClose}
     >
       <div
@@ -49,23 +57,53 @@ const Modal = ({
         tabIndex={-1}
         role="dialog"
         aria-modal="true"
-        className="relative rounded-lg bg-white shadow-lg"
         style={{
+          position: "relative",
+          backgroundColor: "#fff",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
           width,
           height,
           maxWidth: "90%",
           maxHeight: "90%",
+          padding: "20px",
+          overflow: "auto",
         }}
         onClick={(e) => e.stopPropagation()} // Prevent backdrop clicks
       >
-        {title && <h2 className="mb-4 text-lg font-bold p-6">{title}</h2>}
+        {title && (
+          <h2
+            style={{
+              marginBottom: "16px",
+              fontSize: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            {title}
+          </h2>
+        )}
         {children}
         <button
-          className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
+          style={{
+            position: "absolute",
+            top: "8px",
+            right: "8px",
+            width: "32px",
+            height: "32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#e5e5e5",
+            color: "#333",
+            borderRadius: "50%",
+            border: "none",
+            boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.2)",
+            cursor: "pointer",
+          }}
           onClick={onClose}
           aria-label="Close modal"
         >
-          <span className="text-lg font-bold">x</span>
+          ✕
         </button>
       </div>
     </div>,
