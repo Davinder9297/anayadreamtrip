@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Modal from "../Modal/Modal.jsx";
 import Login from "../Login/Login.jsx";
 import { FaRegUserCircle } from "react-icons/fa";
-const Header = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -117,4 +117,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
