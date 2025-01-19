@@ -1,7 +1,7 @@
 "use client"
 import FilterSidebar from "@/Components/HotelFilter/HotelFilter";
 import React from "react";
-import Header from "@/components/Navbar/page";
+import Header from "@/components/Navbar/page.jsx";
 import HotelList from "@/pages/Hotel/HotelsList";
 import { Router } from "react-router-dom";
 const Page = () => {

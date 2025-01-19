@@ -3,7 +3,7 @@ import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import Modal from "../Modal/page";
+import Modal from "../Modal/page.jsx";
 import Login from "../Login/Login";
 import { FaRegUserCircle } from "react-icons/fa";
 const Header = () => {

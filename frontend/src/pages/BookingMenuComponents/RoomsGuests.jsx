@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../../components/Modal/page";
+import Modal from "../../components/Modal/page.jsx";
 import RoomsModal from "./RoomsModal";
 
 const RoomsAndGuestsDropdown = ({ data, setData }) => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../css/Snowflakes.module.css";
-import Header from "../../components/Navbar/page";
+import Header from "../../components/Navbar/page.jsx";
 
 const SnowflakeAnimation = () => {
   const [snowflakes, setSnowflakes] = useState([]);
