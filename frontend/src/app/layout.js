@@ -1,7 +1,7 @@
 // src/app/layout.js
-import Header from "@/components/Navbar/Navbar.jsx";
+import Header from "../components/Navbar/Navbar";
 import "./globals.css";
-import Footer from "@/components/Footer/Footer.jsx";
+import Footer from "../components/Footer/Footer";
 
 export const metadata = {
   title: "Anaya Dream Trip",
