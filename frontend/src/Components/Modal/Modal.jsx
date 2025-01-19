@@ -53,15 +53,15 @@ const Modal = ({
         style={{
           width,
           height,
-          maxWidth: "90%", // Ensures it doesn't exceed the screen width
-          maxHeight: "90%", // Ensures it doesn't exceed the screen height
+          maxWidth: "90%",
+          maxHeight: "90%",
         }}
         onClick={(e) => e.stopPropagation()} // Prevent backdrop clicks
       >
         {title && <h2 className="mb-4 text-lg font-bold p-6">{title}</h2>}
         {children}
         <button
-          className="absolute -right-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
+          className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
           onClick={onClose}
           aria-label="Close modal"
         >
