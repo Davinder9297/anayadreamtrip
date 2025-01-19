@@ -3,10 +3,10 @@ import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import Modal from "../Modal/Modal";
-import Login from "../Login/Login";
+import Modal from "../Modal/index.jsx";
+import Login from "../Login/Login.jsx";
 import { FaRegUserCircle } from "react-icons/fa";
-const Header = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +37,7 @@ const Header = () => {
           className={`flex flex-row  xsm:hidden xsm:gap-0`}
         >
           <div
-            className="hover:text-gray-400"
+            className="hover:text-gray-400 cursor-pointer"
             onClick={() => {
               router.push("/");
             }}
@@ -86,17 +86,17 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden lg:hidden xl:hidden 2xl:hidden bg-black bg-opacity-50 text-white p-4">
-          <Link href="#home" className="block py-2">
+          <Link href="/" className="block py-2">
             Home
           </Link>
-          <Link href="#hotels" className="block py-2">
+          <Link href="/hotels" className="block py-2">
             Hotels
           </Link>
-          <Link href="#rooms" className="block py-2">
-            Rooms
+          <Link href="/resorts" className="block py-2">
+            Resorts
           </Link>
           <Link
-            href="#contact"
+            href="/login"
             className="block py-2 bg-primary text-white px-4 rounded w-fit"
           >
             Login
@@ -117,4 +117,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

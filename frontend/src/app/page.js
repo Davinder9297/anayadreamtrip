@@ -1,11 +1,11 @@
 "use client"
 import HeroSection from "@/pages/Homepage/HeroSection";
 
-const Header = () => {
+const Home = () => {
   return (
       <div className="mt-0"><HeroSection /></div>
 
   );
 };
 
-export default Header;
+export default Home;

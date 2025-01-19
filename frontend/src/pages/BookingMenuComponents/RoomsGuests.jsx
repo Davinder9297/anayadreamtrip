@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "../../Components/Modal/Modal";
 import RoomsModal from "./RoomsModal";
+import Modal from "@/components/Modal/index.jsx";
 
 const RoomsAndGuestsDropdown = ({ data, setData }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

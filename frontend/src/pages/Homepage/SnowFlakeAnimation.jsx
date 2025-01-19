@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "../../css/Snowflakes.module.css";
-import Header from "../../Components/Navbar/Header";
 
 const SnowflakeAnimation = () => {
   const [snowflakes, setSnowflakes] = useState([]);
@@ -46,7 +45,6 @@ const SnowflakeAnimation = () => {
         backgroundColor: "rgba(0, 0, 0, 0.5)",
       }}
     >
-      <Header />
       {snowflakes.map((flake, index) => (
         <div
           key={index}

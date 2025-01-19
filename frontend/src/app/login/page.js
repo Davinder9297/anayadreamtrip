@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function SignupPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#ffffff] via-[#c7a581] to-[#ab8965]">
-      <div className="flex max-w-4xl overflow-hidden rounded-2xl bg-white shadow-lg">
+    <div className="flex min-h-[105vh] items-center justify-center bg-gradient-to-br from-[#ffffff] via-[#c7a581] to-[#ab8965] ">
+      <div className="flex max-w-4xl overflow-hidden rounded-2xl bg-white shadow-lg mt-10">
         {/* Left Section */}
         <div className=" w-1/2 bg-purple-50 flex p-8 md:flex flex-col items-center justify-center">
           <Image

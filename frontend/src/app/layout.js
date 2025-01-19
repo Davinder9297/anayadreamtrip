@@ -1,5 +1,7 @@
 // src/app/layout.js
+// import Navbar from "@/components/Navbar/index.jsx";
 import "./globals.css";
+// import Footer from "@/components/Footer/index.jsx";
 
 export const metadata = {
   title: "Anaya Dream Trip",
@@ -7,9 +9,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
+  return (<>
+
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      {/* <Navbar /> */}
+        {children}
+        {/* <Footer/> */}
+      </body>
     </html>
+    </>
   );
 }
