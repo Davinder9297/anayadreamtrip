@@ -1,7 +1,7 @@
 // src/app/layout.js
-// import Footer from "@/components/Footer/page.jsx";
+import Header from "@/components/Navbar/Navbar";
 import "./globals.css";
-// import Header from "@/components/Navbar/page.jsx";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Anaya Dream Trip",
@@ -13,9 +13,9 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <body>
-      {/* <Header /> */}
+      <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
     </>

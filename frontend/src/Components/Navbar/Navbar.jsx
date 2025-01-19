@@ -3,8 +3,8 @@ import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import Modal from "../Modal/page.jsx";
-import Login from "../Login/Login";
+import Modal from "../Modal/Modal.jsx";
+import Login from "../Login/Login.jsx";
 import { FaRegUserCircle } from "react-icons/fa";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
