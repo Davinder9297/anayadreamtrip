@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
 const Modal = ({
@@ -9,9 +9,12 @@ const Modal = ({
   width = "50%",
   height = "auto",
 }) => {
+  const modalRef = useRef(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"; // Disable scrolling
+      modalRef.current?.focus(); // Focus on the modal
     } else {
       document.body.style.overflow = ""; // Restore scrolling
     }
@@ -20,14 +23,32 @@ const Modal = ({
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen || typeof window === "undefined") return null;
 
   return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-100 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
       onClick={onClose}
     >
       <div
+        ref={modalRef}
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
         className="relative rounded-lg bg-white shadow-lg"
         style={{
           width,
@@ -42,6 +63,7 @@ const Modal = ({
         <button
           className="absolute -right-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
           onClick={onClose}
+          aria-label="Close modal"
         >
           <span className="text-lg font-bold">x</span>
         </button>
