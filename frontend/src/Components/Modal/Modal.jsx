@@ -103,7 +103,7 @@ const Modal = ({
           onClick={onClose}
           aria-label="Close modal"
         >
-          ✕
+          ✕ 
         </button>
       </div>
     </div>,
