@@ -19,15 +19,15 @@ const Header = () => {
 
 
   return (
-    <div className={`text-white absolute top-0 w-full z-50 font-jost `}>
-      <div style={{paddingLeft:'56px',paddingRight:'56px',paddingTop:'10px',paddingBottom:'10px'}} className=" mx-auto  flex items-center justify-between w-full">
+    <div className={`text-white absolute top-0 w-full z-50 font-jost bg-secondary`}>
+      <div style={{paddingRight:'56px',paddingTop:'10px',paddingBottom:'10px'}} className=" mx-auto  flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={80}
-            height={30}
+            width={200}
+            height={80}
           />
         </div>
 
