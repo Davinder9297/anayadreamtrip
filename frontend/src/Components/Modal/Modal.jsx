@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
 const Modal = ({
@@ -9,9 +9,12 @@ const Modal = ({
   width = "50%",
   height = "auto",
 }) => {
+  const modalRef = useRef(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"; // Disable scrolling
+      modalRef.current?.focus(); // Focus on the modal
     } else {
       document.body.style.overflow = ""; // Restore scrolling
     }
@@ -20,30 +23,87 @@ const Modal = ({
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen || typeof window === "undefined") return null;
 
   return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+      }}
       onClick={onClose}
     >
       <div
-        className="relative rounded-lg bg-white shadow-lg"
+        ref={modalRef}
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
         style={{
+          position: "relative",
+          backgroundColor: "#fff",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
           width,
           height,
-          maxWidth: "90%", // Ensures it doesn't exceed the screen width
-          maxHeight: "90%", // Ensures it doesn't exceed the screen height
+          maxWidth: "90%",
+          maxHeight: "90%",
+          padding: "20px",
+          overflow: "auto",
         }}
         onClick={(e) => e.stopPropagation()} // Prevent backdrop clicks
       >
-        {title && <h2 className="mb-4 text-lg font-bold p-6">{title}</h2>}
+        {title && (
+          <h2
+            style={{
+              marginBottom: "16px",
+              fontSize: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            {title}
+          </h2>
+        )}
         {children}
         <button
-          className="absolute -right-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-800 shadow"
+          style={{
+            position: "absolute",
+            top: "8px",
+            right: "8px",
+            width: "32px",
+            height: "32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#e5e5e5",
+            color: "#333",
+            borderRadius: "50%",
+            border: "none",
+            boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.2)",
+            cursor: "pointer",
+          }}
           onClick={onClose}
+          aria-label="Close modal"
         >
-          <span className="text-lg font-bold">x</span>
+          ✕
         </button>
       </div>
     </div>,

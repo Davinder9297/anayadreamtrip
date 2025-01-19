@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  position: static;
+}
 :root {
   --primary: #ab8965;
   --secondary: #181818;
