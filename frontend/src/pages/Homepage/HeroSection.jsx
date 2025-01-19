@@ -3,8 +3,8 @@ import BookingMenu from "./BookingMenu";
 import CountElement from "./CountElement";
 import TestimonialSlider from "./Testinomials";
 import Speciality from "./Speciality";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Navbar/Header";
+import Footer from "../../components/Footer/page";
+import Header from "../../components/Navbar/page";
 import AccommodationList from "./Accomodation";
 
 const SnowflakeAnimation = React.lazy(() => import("./SnowFlakeAnimation"));
