@@ -3,7 +3,7 @@ import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import Modal from "../Modal/Modal.jsx";
+import Modal from "../Modal/index.jsx";
 import Login from "../Login/Login.jsx";
 import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
