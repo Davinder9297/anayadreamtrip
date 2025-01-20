@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <div className="">
         <SnowflakeAnimation />
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2  w-[75%]">
+      <div className="relative bottom-20 left-1/2 transform -translate-x-1/2  w-[75%]">
         <BookingMenu />
       </div>
         <CountElement />
