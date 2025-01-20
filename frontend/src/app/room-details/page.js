@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import Header from "@/components/Navbar/Header";
+import Header from "@/Components/Navbar/Header";
 import RoomDetails from "@/pages/Hotel/Rooms/RoomDetails";
 const Page = () => {
     return (

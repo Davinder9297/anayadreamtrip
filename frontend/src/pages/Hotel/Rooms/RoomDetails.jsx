@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import RoomFinalDetails from "./RoomFinalDetails";
-import Carousel from "@/components/Carousel/Carousel";
+import Carousel from "@/Components/Carousel/Carousel";
 
 const AvailabilityCalendar = dynamic(() => import("./AvailabilityCalendar"), { ssr: false });
 
