@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const HotelList = () => {
@@ -181,7 +183,8 @@ const HotelList = () => {
                 </p>
                 <div className="flex justify-between mt-4">
                   <button className="bg-secondary text-white py-2 px-4 rounded hover:bg-secondary hover:bg-opacity-80">
-                    View Details
+                    <Link href={'/room-details'}>View Details</Link>
+                    
                   </button>
                   <button className="bg-primary text-white py-2 px-4 rounded hover:bg-primary hover:bg-opacity-80">
                     Book Now

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import EmailHandler from "./EmailHandler";
 import OTPHandler from "./OTPHandler";
-import Carousel from "../Carousel/Carousel";
 
 const Login = () => {
   const [step, setStep] = useState(1); // Step 1: Login, Step 2: OTP
@@ -25,7 +24,6 @@ const Login = () => {
 
   return (
     <div className="w-full h-full flex">
-      {/* Left side: Carousel */}
       <div className="w-1/2 bg-secondary flex items-center justify-center">
         <img src="/images/herosection/login/login.jpg" alt="login image" className="h-full" />
       </div>
