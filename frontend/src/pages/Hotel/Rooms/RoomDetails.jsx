@@ -66,7 +66,7 @@ const RoomDetails = () => {
   };
 
   return (
-    <div>
+    <div className="font-marcellus">
       <div className="h-96 bg-black w-full mt-0">
         <Carousel images={images} />
       </div>
@@ -139,7 +139,7 @@ const RoomDetails = () => {
           </div>
           <div className="pb-40"><AvailabilityCalendar onApply={handleApply}/></div>
         </div>
-        <div className="w-[40%] bg-secondary rounded-md h-fit py-8 px-6"><RoomFinalDetails/></div>
+        <div className="w-[40%] bg-secondary rounded-md h-fit py-8 px-6 sticky top-1"><RoomFinalDetails/></div>
       </div>
     </div>
   );

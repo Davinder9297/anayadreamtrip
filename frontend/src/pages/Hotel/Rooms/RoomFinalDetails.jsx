@@ -68,7 +68,7 @@ const RoomFinalDetails = () => {
   };
 
   return (
-    <div className="bg-black text-white p-6 rounded-lg max-w-md mx-auto">
+    <div className="bg-secondary text-white p-6 rounded-lg max-w-md mx-auto">
       <div className="text-[40px] font-marcellus font-semibold mb-2">Reserve</div>
       <p className="text-sm text-gray-300 mb-6">
         From <span className="text-lg font-bold">Rs. {baseRate}</span> night

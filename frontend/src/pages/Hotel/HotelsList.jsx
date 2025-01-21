@@ -181,11 +181,11 @@ const HotelList = () => {
                 <p className="text-gray-500 text-sm">
                   + ₹{item.taxes} taxes & fees · per room per night
                 </p>
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between mt-4"><Link href={'/room-details'}>
                   <button className="bg-secondary text-white py-2 px-4 rounded hover:bg-secondary hover:bg-opacity-80">
-                    <Link href={'/room-details'}>View Details</Link>
+                    <div>View Details</div> </button></Link>
                     
-                  </button>
+                 
                   <button className="bg-primary text-white py-2 px-4 rounded hover:bg-primary hover:bg-opacity-80">
                     Book Now
                   </button>
