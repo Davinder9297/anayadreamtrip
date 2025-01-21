@@ -3,10 +3,10 @@ import {  useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import Modal from "../Modal/index.jsx";
+import Modal from "../Modal/Modal.jsx";
 import Login from "../Login/Login.jsx";
 import { FaRegUserCircle } from "react-icons/fa";
-const Navbar = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   
   return (
-    <div className={`text-white absolute top-0 w-full z-50 font-jost bg-secondary`}>
+    <div className={`text-white  w-full z-100 font-jost bg-secondary`}>
       <div style={{paddingRight:'56px',paddingTop:'10px',paddingBottom:'10px'}} className=" mx-auto  flex items-center justify-between w-full">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -115,4 +115,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

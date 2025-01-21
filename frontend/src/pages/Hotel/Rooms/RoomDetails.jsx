@@ -1,5 +1,4 @@
 "use client";
-import Carousel from "@/Components/Carousel/Carousel";
 import { PiUsersThreeFill } from "react-icons/pi";
 import React, { useState } from "react";
 import { FaExpandArrowsAlt } from "react-icons/fa";
@@ -17,6 +16,7 @@ import {
 } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import RoomFinalDetails from "./RoomFinalDetails";
+import Carousel from "@/Components/Carousel/Carousel";
 
 const AvailabilityCalendar = dynamic(() => import("./AvailabilityCalendar"), { ssr: false });
 
