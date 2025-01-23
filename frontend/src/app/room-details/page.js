@@ -6,7 +6,6 @@ const Page = () => {
     return (
         <>
             {/* <Router> */}
-            <div className=""><Header/></div>
             <div className="pt-20 flex"><RoomDetails/></div>
             {/* </Router> */}
         </>
