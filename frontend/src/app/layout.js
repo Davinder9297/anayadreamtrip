@@ -2,6 +2,7 @@
 import Header from "@/Components/Navbar/Header";
 import "./globals.css";
 import Footer from "@/Components/Footer/Footer";
+import "leaflet/dist/leaflet.css";
 
 export const metadata = {
   title: "Anaya Dream Trip",

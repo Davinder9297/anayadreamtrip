@@ -2,47 +2,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-const HotelList = () => {
+const HotelList = ({items, name, setval}) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState({});
-
-  const items = [
-    {
-      title: "Super Townhouse Collectorate Circle",
-      location: "Near Municipal Corporation, Jaipur",
-      rating: 4.2,
-      reviews: 303,
-      description: "Very Good",
-      features: ["Elevator", "Reception", "Free Wifi", "AC"],
-      price: 835,
-      originalPrice: 4584,
-      taxes: 190,
-      images: [
-        "/images/hotels/1.png",
-        "/images/hotels/2.png",
-        "/images/hotels/3.png",
-        "/images/hotels/4.png",
-        "/images/hotels/5.png",
-        "/images/hotels/6.png",
-      ],
-    },
-    {
-      title: "Urban Stay Premium Plaza",
-      location: "Near City Center, Jaipur",
-      rating: 4.5,
-      reviews: 500,
-      description: "Excellent",
-      features: ["Pool", "Gym", "Free Breakfast", "AC"],
-      price: 1200,
-      originalPrice: 5200,
-      taxes: 250,
-      images: [
-        "/images/hotels/5.png",
-        "/images/hotels/6.png",
-        "/images/hotels/7.png",
-      ],
-    },
-  ];
 
   // Initialize image index state for all hotels
   React.useEffect(() => {
@@ -54,7 +16,7 @@ const HotelList = () => {
   }, []);
 
   // Filtered items based on the search term
-  const filteredItems = items.filter((item) =>
+  const filteredItems = items?.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -88,7 +50,7 @@ const HotelList = () => {
   return (
     <div className=" p-4 w-[75%] mx-auto font-marcellus">
       <div className="flex justify-between">
-        <h1 className="text-2xl font-semibold mb-4">Hotel Listings</h1>
+        <h1 className="text-2xl font-semibold mb-4">{name} Listings</h1>
 
         {/* Search Bar */}
         <div className="mb-6">
@@ -104,8 +66,8 @@ const HotelList = () => {
 
       {/* Hotel Cards */}
       <div className="grid grid-cols-1 gap-6">
-        {filteredItems.length > 0 ? (
-          filteredItems.map((item, index) => (
+        {filteredItems?.length > 0 ? (
+          filteredItems?.map((item, index) => (
             <div
               key={index}
               className="flex border border-gray-300 rounded-lg overflow-hidden w-full h-[280px] overflow-y-auto sidebar"
@@ -185,10 +147,10 @@ const HotelList = () => {
                   <button className="bg-secondary text-white py-2 px-4 rounded hover:bg-secondary hover:bg-opacity-80">
                     <div>View Details</div> </button></Link>
                     
-                 
+                 {setval&&
                   <button className="bg-primary text-white py-2 px-4 rounded hover:bg-primary hover:bg-opacity-80">
                     Book Now
-                  </button>
+                  </button>}
                 </div>
               </div>
             </div>

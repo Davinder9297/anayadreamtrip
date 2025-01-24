@@ -1,13 +1,12 @@
 "use client"
 import React from "react";
-import Header from "@/Components/Navbar";
 import RoomDetails from "@/pages/Hotel/Rooms/RoomDetails";
 const Page = () => {
     return (
         <>
             {/* <Router> */}
-            <div className=""><Header/></div>
-            <div className="pt-20 flex"><RoomDetails/></div>
+            {/* <div className=""><Header/></div> */}
+            <div className="flex"><RoomDetails/></div>
             {/* </Router> */}
         </>
     );

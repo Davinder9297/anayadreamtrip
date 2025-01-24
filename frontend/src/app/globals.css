@@ -189,3 +189,19 @@ body {
     border-radius: 1px;
   }
 }
+
+/* location animation */
+@keyframes fadeSlideUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 1.5s ease-in-out forwards;
+}

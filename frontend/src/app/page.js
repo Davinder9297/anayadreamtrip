@@ -1,13 +1,9 @@
 "use client"
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
-import HeroSection from "@/pages/Homepage/HeroSection";
+import Homepage from "@/pages/Homepage/Homepage";
 
 const Home = () => {
   return (
-    
-      <div className="mt-0"><Navbar/><HeroSection /><Footer/></div>
-
+      <div className="mt-0"><Homepage /></div>
   );
 };
 

@@ -14,7 +14,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className={`relative w-full h-full overflow-hidden`}>
       {/* Image Container */}
       <div
         className="flex transition-transform duration-1000"

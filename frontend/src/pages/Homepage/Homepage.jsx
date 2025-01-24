@@ -7,7 +7,7 @@ import AccommodationList from "./Accomodation";
 
 const SnowflakeAnimation = React.lazy(() => import("./SnowFlakeAnimation"));
 
-export default function HeroSection() {
+export default function Homepage() {
   return (
     <div className="">
         <SnowflakeAnimation />

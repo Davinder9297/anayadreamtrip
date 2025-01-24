@@ -2,10 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
-import countelement1 from "../../../public/images/herosection/CountElement/countelement1.svg";
-import countelement2 from "../../../public/images/herosection/CountElement/countelement2.svg";
-import countelement3 from "../../../public/images/herosection/CountElement/countelement3.svg";
-import countelement4 from "../../../public/images/herosection/CountElement/countelement4.svg";
 import bgImg from "../../../public/images/herosection/CountElement/bgImg.png";
 
 const responsive = {
@@ -27,7 +23,7 @@ const responsive = {
   },
 };
 
-function CountElement({ trustedData }) {
+function CountElement() {
   const [trustedMembers, setTrustedMembers] = useState(0);
   const [gstFiled, setGstFiled] = useState(0);
   const [tdsFiled, setTdsFiled] = useState(0);
@@ -57,22 +53,22 @@ function CountElement({ trustedData }) {
   }, []);
 
   const items = [
-    { count: trustedMembers, label: "Trusted Members", icon: countelement1 },
-    { count: gstFiled, label: "GST Return Filed", icon: countelement2 },
-    { count: tdsFiled, label: "TDS Return Filed", icon: countelement3 },
-    { count: itrFiled, label: "ITR Filed", icon: countelement4 },
+    { count: trustedMembers, label: "Trusted Members", icon: "/images/herosection/CountElement/countelement1.svg" },
+    { count: gstFiled, label: "GST Return Filed", icon: "/images/herosection/CountElement/countelement2.svg" },
+    { count: tdsFiled, label: "TDS Return Filed", icon: "/images/herosection/CountElement/countelement3.svg" },
+    { count: itrFiled, label: "ITR Filed", icon: "/images/herosection/CountElement/countelement4.svg" },
   ];
 
   return (
     <div
-      className={`bg-cover h-64 pt-28 w-[100%] flex ml-auto mb-8 xsm:h-40 xsm:pt-0 xsm:bg-contain xsm:bg-no-repeat small:h-44 small:mt-0 small:pt-0 xsm:mt-0 small:bg-contain small:bg-no-repeat`}
+      className={`bg-cover h-44 w-[100%] flex ml-auto mb-8 xsm:h-40 xsm:pt-0 xsm:bg-contain xsm:bg-no-repeat small:h-44 small:mt-0 small:pt-0 xsm:mt-0 small:bg-contain small:bg-no-repeat`}
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
       {/* Desktop View */}
       <div className="xsm:hidden small:hidden flex justify-between w-[80%] mx-auto items-center">
         {items.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
-            <Image
+            <img
               src={item.icon}
               alt=""
               height={50}
