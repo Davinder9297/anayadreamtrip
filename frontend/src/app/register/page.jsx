@@ -492,7 +492,7 @@ export default function RegisterPage() {
                   />
                   <p className="text-gray-600 text-center">
                     Thank you for registering. We will process your details and
-                    notify you soon.
+                    notify you soon. 
                   </p>
                 </motion.div>
               )}
